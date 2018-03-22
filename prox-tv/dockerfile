@@ -1,0 +1,6 @@
+FROM continuumio/anaconda3
+RUN apt update
+RUN apt -y install --reinstall build-essential
+RUN apt -y install libblas-dev libblas-doc liblapacke-dev liblapack-doc liblapack-dev
+RUN /bin/bash -c 'source $HOME/.bashrc'
+RUN pip install prox-tv
